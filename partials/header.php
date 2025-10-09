@@ -12,8 +12,8 @@
                         <ul class="menu__list">
                             <li class="menu__item"><a href="https://forum.onkologia.ru/" class="menu__link">Форум</a>
                             </li>
-                            <li class="menu__item"><a href="about.html" class="menu__link">Фонд</a></li>
-                            <li class="menu__item"><a href="services.html" class="menu__link">О нас</a></li>
+                            <li class="menu__item"><a href="/fond" class="menu__link">Фонд</a></li>
+                            <li class="menu__item"><a href="/o-nas" class="menu__link">О нас</a></li>
                         </ul>
                     </nav>
                 </div>
