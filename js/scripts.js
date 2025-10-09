@@ -1,0 +1,117 @@
+(function () {
+  const THEME_KEY = 'theme';
+  const root = document.documentElement;
+
+  const headerToggle = document.querySelector('.header__change-theme');
+  const mobileToggle = document.querySelector('.theme-toggle-mobile');
+  const mobileText = mobileToggle?.querySelector('.theme-toggle-text');
+
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const burgerBtn = document.querySelector('.header__hamburger');
+
+  // инициализация темы
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved === 'dark' || saved === 'light') {
+    root.setAttribute('data-theme', saved);
+  } else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  }
+
+  function updateMobileText() {
+    if (!mobileText) return;
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    mobileText.textContent = isDark ? 'Светлая тема' : 'Тёмная тема';
+  }
+
+  updateMobileText();
+
+  function toggleTheme(e) {
+    if (e) e.preventDefault();
+    const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem(THEME_KEY, next);
+    updateMobileText();
+
+    // закрыть мобильное меню при клике внутри него
+    if (mobileMenu && mobileMenu.classList.contains('active')) {
+      mobileMenu.classList.remove('active');
+      burgerBtn?.classList.remove('active');
+    }
+  }
+
+  headerToggle?.addEventListener('click', toggleTheme);
+  mobileToggle?.addEventListener('click', toggleTheme);
+
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  mq.addEventListener?.('change', (e) => {
+    const explicit = localStorage.getItem(THEME_KEY);
+    if (!explicit) {
+      root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      updateMobileText();
+    }
+  });
+})();
+
+const burgerBtn = document.querySelector('.header__hamburger');
+const menu = document.querySelector('.mobile-menu');
+
+burgerBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    menu.classList.toggle('active');
+    burgerBtn.classList.toggle('active'); // переключаем состояние кнопки
+});
+
+document.addEventListener('scroll', function () {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 0) {
+    header.classList.add('active');
+  } else {
+    header.classList.remove('active');
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".tag-pill").forEach(el => {
+    // заменяем дефисы на пробелы в тексте
+    el.textContent = el.textContent.replace(/-/g, " ");
+  });
+});
+
+document.querySelectorAll('.value').forEach(valueEl => {
+  // создаем кнопку
+  const btn = document.createElement('button');
+  btn.className = 'copy-btn';
+  btn.setAttribute('aria-label', 'Скопировать');
+  btn.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </svg>
+  `;
+
+  // вставляем в .value
+  valueEl.appendChild(btn);
+
+  // логика копирования
+  btn.addEventListener('click', e => {
+    const text = valueEl.childNodes[0].textContent.trim(); // текст без кнопки
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Скопировано!';
+      setTimeout(() => {
+        btn.innerHTML = `
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>`;
+      }, 1200);
+    });
+    e.stopPropagation();
+  });
+});
+
+
+
