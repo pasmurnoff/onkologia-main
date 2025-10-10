@@ -20,6 +20,15 @@ body.modal-open {
     transform: none;
   }
 
+  &__body {
+    p {
+      color: var(--black);
+      font-size: 15px;
+      line-height: 150%;
+      font-weight: 500;
+    }
+  }
+
   &__longtext {
     overflow-y: scroll; // здесь скроллим
     -webkit-overflow-scrolling: touch;

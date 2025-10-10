@@ -8,7 +8,7 @@
                     </div>
                     <div class="user__info">
                         <span class="user__name">Лия</span>
-                        <!-- <span class="user__age">Без возраста</span> -->
+
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="user__info">
                         <span class="user__name">Дарья</span>
-                        <!-- <span class="user__age">Без возраста</span> -->
+
                     </div>
                 </div>
             </div>
@@ -50,7 +50,6 @@
                     </div>
                     <div class="user__info">
                         <span class="user__name">Алёна</span>
-                        <span class="user__age">30 лет</span>
                     </div>
                 </div>
             </div>
@@ -71,7 +70,7 @@
                     </div>
                     <div class="user__info">
                         <span class="user__name">Роберт</span>
-                        <span class="user__age">50 лет</span>
+
                     </div>
                 </div>
             </div>
@@ -92,7 +91,7 @@
                     </div>
                     <div class="user__info">
                         <span class="user__name">Наталия</span>
-                        <!-- <span class="user__age">Без возраста</span> -->
+
                     </div>
                 </div>
             </div>
@@ -116,7 +115,7 @@
                     </svg>
                 </div>
                 <div class="feedback__slogan">
-                    <p>Мы всегда рады любым вашим <span>теплым словам</span> нашем фонде! </p>
+                    <p>Мы всегда рады любым вашим <span>теплым словам</span> о нашем фонде! </p>
                 </div>
             </div>
             <div class="feedback__action_create">

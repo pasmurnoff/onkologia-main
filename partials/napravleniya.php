@@ -2,7 +2,7 @@
     <div class="napravleniya__wrap">
         <div class="napravleniya__item">
             <div class="napravleniya__text">
-                <span>Психологическая и духовная помощь</span>
+                <span>Психологическая <br> и духовная помощь</span>
                 <p>Поддерживаем пациентов и их близких, помогая справляться с трудностями и тревогами
                 </p>
             </div>

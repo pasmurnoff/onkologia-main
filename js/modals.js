@@ -217,8 +217,8 @@ if (writeForm) {
       writeForm.style.setProperty('display', 'none', 'important');
       resultEl.innerHTML = `
         <div class="error">
-          <h3>❌ Ошибка отправки</h3>
-          <p>К сожалению, не удалось отправить сообщение.<br>Попробуйте позже или напишите нам напрямую.</p>
+          <h3>❌  Не удалось отправить</h3>
+          <p>Попробуйте позже или свяжитьсь с нами другим способом</p>
         </div>`;
       console.error(err);
     }
@@ -272,10 +272,10 @@ if (writeForm) {
       if (titleEl?.style) titleEl.style.display = 'none';
       if (resultEl) {
         resultEl.innerHTML = `
-          <div class="error">
-            <h3>❌ Не удалось отправить</h3>
-            <p>Попробуйте позже или свяжитесь с нами другим способом.</p>
-          </div>`;
+              <div class="error">
+          <h3>❌  Не удалось отправить</h3>
+          <p>Попробуйте позже или свяжитьсь с нами другим способом</p>
+        </div>`;
       }
       console.error(err);
     }
