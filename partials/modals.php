@@ -1,13 +1,3 @@
-<div class="modal" id="modal-dosnate" role="dialog" aria-modal="true" aria-hidden="true"
-    aria-labelledby="modal-donatse-title">
-    <div class="modal__backdrop" data-modal-close></div>
-    <div class="modal__dialog" role="document">
-        <button class="modal__close" aria-label="Закрыть" data-modal-close>&times;</button>
-        <h2 id="modal-donate-title">Пожертвовать</h2>
-        <p>Другая модалка…</p>
-    </div>
-</div>
-
 <div class="modal" id="modal-feedback" role="dialog" aria-modal="true" aria-hidden="true"
     aria-labelledby="modal-feedback-title">
     <div class="modal__backdrop" data-modal-close></div>

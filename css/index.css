@@ -1077,7 +1077,8 @@ body.modal-open {
 }
 .main-banner__text {
   text-align: center;
-  max-width: 740px;
+  padding-left: 36px;
+  padding-right: 36px;
   margin: auto;
   margin-bottom: 36px;
 }
@@ -1159,7 +1160,7 @@ body.modal-open {
           justify-content: center;
 }
 .main-banner__text .slide span {
-  font-size: 38px;
+  font-size: 34px;
   color: #fff;
   line-height: 130%;
   font-weight: 700;
@@ -2027,6 +2028,58 @@ body.modal-open {
   color: var(--black);
 }
 
+/* ✅ Мобильная адаптация quote-card */
+@media screen and (max-width: 768px) {
+  .team__quote {
+    position: relative;
+  }
+  .team__quote:focus-within .quote-card {
+    display: block;
+  }
+  .team__quote.is-open .quote-card {
+    display: block;
+  }
+  .quote-card {
+    /* позиционируем НАД аватаркой и центрируем */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    bottom: auto;
+    right: 50%;
+    left: 50%;
+    top: -8px;
+    -webkit-transform: translate(-50%, calc(-100% - 8px));
+            transform: translate(-50%, calc(-100% - 8px));
+    /* ширина под экран, с безопасными отступами */
+    width: min(360px, 100vw - 32px);
+    max-width: calc(100vw - 32px);
+    /* если текста много — не вылезаем по высоте */
+    max-height: min(60vh, 480px);
+    overflow: auto;
+    -ms-scroll-chaining: none;
+        overscroll-behavior: contain;
+    /* чуть компактнее визуал на телефонах */
+    padding: 16px;
+    border-radius: 16px;
+    -webkit-box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.12);
+            box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.12);
+    /* учёт "чёлки"/safe-area на iOS */
+    margin-top: env(safe-area-inset-top, 0px);
+  }
+  /* переворачиваем "хвостик" вниз и центрируем его по карточке */
+  .quote-card::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    -webkit-transform: translateX(50%) rotate(225deg);
+            transform: translateX(50%) rotate(225deg);
+    width: 12px;
+    height: 12px;
+    background: var(--card);
+    border-right: 1px solid var(--border, rgba(0, 0, 0, 0.08));
+    border-bottom: 1px solid var(--border, rgba(0, 0, 0, 0.08));
+  }
+}
 .team__wrap {
   display: -ms-grid;
   display: grid;
