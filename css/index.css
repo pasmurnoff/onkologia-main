@@ -1872,7 +1872,8 @@ body.modal-open {
   position: relative;
 }
 .rec-card .row:first-of-type {
-  padding: 0 0;
+  padding: 0;
+  padding-bottom: 24px;
 }
 @media screen and (max-width: 520px) {
   .rec-card .row {

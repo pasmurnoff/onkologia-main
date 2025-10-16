@@ -284,6 +284,38 @@
 
         <div class="team__element">
             <div class="team__photo">
+                <img src="images/team/s_rijikova.png">
+                <div class="team__quote">
+                    <div class="quote-card">
+                        <div class="quote-card__user">
+                            <img src="images/team/s_rijikova.png">
+                            <span>Светлана Рыжикова</span>
+                        </div>
+                        <div class="quote-card__body">
+                            <p>«Что внутри, то и снаружи.»</p>
+                        </div>
+                    </div>
+
+                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path
+                                d="M2.91183 0.0778809C4.48979 0.0778809 5.76897 1.33708 5.76897 2.89038C5.76897 5.42163 4.3404 7.67163 2.3404 9.07788L2.6529 5.6908C1.19631 5.56196 0.0546875 4.35775 0.0546875 2.89038C0.0546875 1.33708 1.33387 0.0778809 2.91183 0.0778809Z"
+                                style="fill: var(--silver-grey);" />
+                            <path
+                                d="M9.62612 0.0778809C11.2041 0.0778809 12.4833 1.33708 12.4833 2.89038C12.4833 5.42163 11.0547 7.67163 9.05469 9.07788L9.36719 5.6908C7.9106 5.56196 6.76897 4.35775 6.76897 2.89038C6.76897 1.33708 8.04816 0.0778809 9.62612 0.0778809Z"
+                                style="fill: var(--silver-grey);" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="team__text">
+                <span class="team__name">Светлана Рыжикова</span>
+                <span class="team__position">Клинический психолог.</span>
+            </div>
+        </div>
+
+        <div class="team__element">
+            <div class="team__photo">
                 <img src="images/team/al_zapuskalov.png">
                 <div class="team__quote">
                     <div class="quote-card">
@@ -548,6 +580,38 @@
             </div>
             <div class="team__text">
                 <span class="team__name">Сергей Барабанов</span>
+                <span class="team__position">Волонтёр фонда</span>
+            </div>
+        </div>
+
+        <div class="team__element">
+            <div class="team__photo">
+                <img src="images/team/i_akhmetov.png">
+                <div class="team__quote">
+                    <div class="quote-card">
+                        <div class="quote-card__user">
+                            <img src="images/team/i_akhmetov.png">
+                            <span>Ильдар Ахметов</span>
+                        </div>
+                        <div class="quote-card__body">
+                            <p>«Никто кроме нас»</p>
+                        </div>
+                    </div>
+
+                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path
+                                d="M2.91183 0.0778809C4.48979 0.0778809 5.76897 1.33708 5.76897 2.89038C5.76897 5.42163 4.3404 7.67163 2.3404 9.07788L2.6529 5.6908C1.19631 5.56196 0.0546875 4.35775 0.0546875 2.89038C0.0546875 1.33708 1.33387 0.0778809 2.91183 0.0778809Z"
+                                style="fill: var(--silver-grey);" />
+                            <path
+                                d="M9.62612 0.0778809C11.2041 0.0778809 12.4833 1.33708 12.4833 2.89038C12.4833 5.42163 11.0547 7.67163 9.05469 9.07788L9.36719 5.6908C7.9106 5.56196 6.76897 4.35775 6.76897 2.89038C6.76897 1.33708 8.04816 0.0778809 9.62612 0.0778809Z"
+                                style="fill: var(--silver-grey);" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="team__text">
+                <span class="team__name">Ильдар Ахметов</span>
                 <span class="team__position">Волонтёр фонда</span>
             </div>
         </div>
