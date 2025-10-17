@@ -2312,6 +2312,16 @@ body.modal-open {
           justify-content: center;
 }
 
+.quote-right {
+  -webkit-transform: translate(-38%, calc(-100% - 8px));
+          transform: translate(-38%, calc(-100% - 8px));
+}
+
+.quote-left {
+  -webkit-transform: translate(-88%, calc(-100% - 8px));
+          transform: translate(-88%, calc(-100% - 8px));
+}
+
 button,
 input,
 textarea,

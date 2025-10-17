@@ -113,5 +113,27 @@ document.querySelectorAll('.value').forEach(valueEl => {
   });
 });
 
+function setQuoteCardPosition() {
+  // Проверяем ширину окна
+  if (window.innerWidth > 380) return;
 
+  document.querySelectorAll('.team__element').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const windowCenter = window.innerWidth / 2;
+    const quote = el.querySelector('.quote-card');
+    if (!quote) return;
 
+    // Определяем, ближе ли элемент к левой или правой части экрана
+    if (rect.left < windowCenter) {
+      quote.classList.add('quote-right');
+      quote.classList.remove('quote-left');
+    } else {
+      quote.classList.add('quote-left');
+      quote.classList.remove('quote-right');
+    }
+  });
+}
+
+// Запускаем при загрузке и при изменении размера окна
+window.addEventListener('load', setQuoteCardPosition);
+window.addEventListener('resize', setQuoteCardPosition);

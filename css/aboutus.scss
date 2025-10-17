@@ -1252,3 +1252,11 @@
     justify-content: center;
   }
 }
+
+.quote-right {
+  transform: translate(-38%, calc(-100% - 8px));
+}
+
+.quote-left {
+  transform: translate(-88%, calc(-100% - 8px));
+}

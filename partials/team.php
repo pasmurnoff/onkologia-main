@@ -3,6 +3,7 @@
         <div class="team__element">
             <div class="team__photo">
                 <img src="images/team/k_ismagilov.png">
+
                 <div class="team__quote">
                     <div class="quote-card">
                         <div class="quote-card__user">
@@ -14,7 +15,6 @@
                                 начало пути. Мы поможем пройти его до конца».</p>
                         </div>
                     </div>
-
                     <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path
